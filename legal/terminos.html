@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Términos y Condiciones — Bencina Conveniente</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand: #0b7c8f;
+      --brand-light: #e7f3f5;
+      --text: #1a1a1a;
+      --muted: #555;
+      --border: #dde4e8;
+      --radius: 10px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text);
+      background: #f5f7f9;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--brand);
+      color: #fff;
+      padding: 36px 24px 32px;
+      text-align: center;
+    }
+
+    .header-app {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .header-app img {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      flex-shrink: 0;
+    }
+
+    .header-app-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    .header-divider {
+      width: 40px;
+      height: 1px;
+      background: rgba(255,255,255,0.3);
+      margin: 0 auto 14px;
+    }
+
+    header h1 {
+      font-size: 1.35rem;
+      font-weight: 700;
+    }
+
+    /* ── Main ── */
+    main {
+      max-width: 720px;
+      margin: 32px auto;
+      padding: 0 16px 48px;
+    }
+
+    .notice {
+      background: var(--brand-light);
+      border-left: 4px solid var(--brand);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      margin-bottom: 28px;
+      font-size: 0.93rem;
+      color: var(--brand);
+    }
+
+    section {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+
+    section h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--brand);
+      margin-bottom: 10px;
+    }
+
+    section p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    section p + p { margin-top: 10px; }
+
+    section ul {
+      padding-left: 20px;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    section li + li { margin-top: 8px; }
+
+    section a {
+      color: var(--brand);
+      overflow-wrap: anywhere;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 0 16px 40px;
+    }
+
+    .footer-links {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 24px;
+    }
+
+    .footer-links a {
+      color: var(--brand);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover { text-decoration: underline; }
+
+    .footer-dev {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      padding: 10px 20px;
+    }
+
+    .footer-dev span {
+      font-size: 0.78rem;
+      color: #888;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .footer-dev img {
+      height: 26px;
+      width: auto;
+    }
+
+    @media (max-width: 480px) {
+      header h1 { font-size: 1.15rem; }
+      .header-app img { width: 48px; height: 48px; }
+      section { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-app">
+    <img src="img/app-icon.png" alt="Ícono Bencina Conveniente" />
+    <div class="header-app-name">Bencina Conveniente</div>
+  </div>
+  <div class="header-divider"></div>
+  <h1>Términos y Condiciones</h1>
+</header>
+
+<main>
+
+  <section>
+    <h2>Aviso de independencia institucional</h2>
+    <p>
+      <strong>Bencina Conveniente es una aplicaci&oacute;n privada desarrollada por PeumaTek.</strong>
+      No representa al Gobierno de Chile, a la Comisi&oacute;n Nacional de Energía (CNE) ni a ninguna
+      instituci&oacute;n p&uacute;blica u organismo oficial. La aplicaci&oacute;n no entrega ni
+      facilita servicios gubernamentales.
+    </p>
+    <p>
+      Los precios, distancias y recomendaciones que muestra la aplicaci&oacute;n son referenciales e
+      informativos. No constituyen una oferta comercial, un documento oficial ni un acto
+      administrativo.
+    </p>
+  </section>
+
+  <section>
+    <h2>Fuentes oficiales de referencia</h2>
+    <p>
+      La aplicaci&oacute;n usa informaci&oacute;n p&uacute;blica de fuentes oficiales como referencia
+      para los precios de combustible y la ubicaci&oacute;n de las estaciones de servicio. Estas
+      fuentes permiten verificar los datos mostrados:
+    </p>
+    <ul>
+      <li>Comisi&oacute;n Nacional de Energía (CNE): <a href="https://www.cne.cl/" target="_blank" rel="noopener">https://www.cne.cl/</a></li>
+      <li>Bencina En Línea (precios de combustibles, CNE): <a href="https://www.bencinaenlinea.cl/" target="_blank" rel="noopener">https://www.bencinaenlinea.cl/</a></li>
+      <li>OpenStreetMap (cartografía del mapa): <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">https://www.openstreetmap.org/copyright</a></li>
+    </ul>
+    <p>
+      La menci&oacute;n de estas fuentes no implica afiliaci&oacute;n, patrocinio, aprobaci&oacute;n
+      ni representaci&oacute;n por parte de dichas instituciones.
+    </p>
+  </section>
+
+  <div class="notice">
+    Última actualización: junio de 2026 &nbsp;·&nbsp; Vigente desde la versión 1.0.0
+  </div>
+
+  <section>
+    <h2>Aceptación de los términos</h2>
+    <p>
+      Al descargar y usar la app <strong>Bencina Conveniente</strong> aceptas estos términos y
+      condiciones. Si no estás de acuerdo, por favor desinstala la app.
+    </p>
+  </section>
+
+  <section>
+    <h2>Uso referencial — los precios pueden variar</h2>
+    <p>
+      Los precios de combustible mostrados provienen de la información que las estaciones reportan a
+      la Comisión Nacional de Energía y pueden <strong>no coincidir exactamente</strong> con el
+      precio vigente en el surtidor al momento de tu visita, debido a actualizaciones, promociones,
+      descuentos por aplicación o diferencias horarias en el reporte.
+    </p>
+    <p>
+      Te recomendamos <strong>confirmar el precio en la propia estación</strong> antes de cargar
+      combustible. La app es una herramienta de apoyo a la decisión, no una garantía de precio.
+    </p>
+  </section>
+
+  <section>
+    <h2>Recomendación de conveniencia</h2>
+    <p>
+      La app destaca las estaciones "más convenientes" combinando el precio del combustible con la
+      distancia, los litros estimados y el rendimiento de tu vehículo. Este cálculo es una
+      <strong>estimación de apoyo</strong> con los valores que tú configuras y no garantiza que sea
+      el menor gasto real en todos los casos.
+    </p>
+  </section>
+
+  <section>
+    <h2>Exactitud y vigencia de los datos</h2>
+    <p>
+      Hacemos nuestro mejor esfuerzo por mantener los datos actualizados, pero <strong>no
+      garantizamos</strong> que los precios, ubicaciones o disponibilidad de las estaciones sean
+      exactos o estén siempre vigentes. En caso de no haber conexión, la app muestra los últimos
+      datos guardados, que pueden estar desactualizados.
+    </p>
+  </section>
+
+  <section>
+    <h2>Responsabilidad</h2>
+    <p>
+      El uso de esta app es bajo tu propia responsabilidad. El desarrollador no asume
+      responsabilidad por decisiones tomadas con base en los resultados de la app, ni por errores,
+      inexactitudes o falta de disponibilidad de los datos provenientes de fuentes externas.
+    </p>
+  </section>
+
+  <section>
+    <h2>Mapas y datos de terceros</h2>
+    <p>
+      El mapa utiliza cartografía de <strong>OpenStreetMap</strong> y sus colaboradores, sujeta a su
+      propia licencia. Los precios y datos de estaciones se basan en información pública de la CNE.
+      No tenemos control sobre el contenido ni la disponibilidad de estos servicios de terceros.
+    </p>
+  </section>
+
+  <section>
+    <h2>Publicidad</h2>
+    <p>
+      La app muestra anuncios a través de Google AdMob para financiar su desarrollo y
+      mantenerse gratuita. Los anuncios son gestionados por Google según sus propias
+      políticas. No tenemos control sobre el contenido específico de los anuncios que
+      se muestran.
+    </p>
+  </section>
+
+  <section>
+    <h2>Propiedad intelectual</h2>
+    <p>
+      El contenido, diseño, código y marca de esta app son propiedad de <strong>PeumaTek</strong>.
+      No está permitida su reproducción, distribución o modificación sin autorización expresa y por
+      escrito.
+    </p>
+  </section>
+
+  <section>
+    <h2>Modificaciones</h2>
+    <p>
+      Nos reservamos el derecho de actualizar estos términos en cualquier momento. Los cambios se
+      comunicarán mediante las notas de actualización de la app y la fecha de vigencia de esta
+      página será actualizada.
+    </p>
+  </section>
+
+  <section>
+    <h2>Contacto</h2>
+    <p>
+      Para consultas sobre estos términos escríbenos a
+      <a href="mailto:jorge.urra.merino@gmail.com">jorge.urra.merino@gmail.com</a>.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="privacidad.html">Política de privacidad</a>
+    &nbsp;·&nbsp;
+    Bencina Conveniente &copy; 2026
+  </div>
+  <div class="footer-dev">
+    <span>Desarrollado por PeumaTek</span>
+    <img src="img/logo-peumatek.png" alt="PeumaTek" />
+  </div>
+</footer>
+
+</body>
+</html>
