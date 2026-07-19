@@ -209,15 +209,14 @@
   </section>
 
   <div class="notice">
-    Última actualización: junio de 2026 &nbsp;·&nbsp; Vigente desde la versión 1.0.0
+    Última actualización: julio de 2026 &nbsp;·&nbsp; Vigente desde la versión 1.0.1
   </div>
 
   <section>
     <h2>¿Qué datos usamos?</h2>
     <p>
-      Esta aplicación <strong>no recopila ni transmite datos personales</strong> a ningún servidor
-      propio. En ningún momento solicitamos nombre, RUT, correo, teléfono ni ningún dato de
-      identificación personal.
+      Esta aplicación no crea cuentas ni solicita nombre, RUT, correo, teléfono u otros datos de
+      identificación personal. PeumaTek no mantiene una base de datos de usuarios.
     </p>
     <p>
       Los valores que configuras (rendimiento del vehículo, litros, radio de búsqueda, combustible
@@ -230,9 +229,11 @@
     <h2>Ubicación</h2>
     <p>
       La app puede solicitar acceso a tu ubicación (GPS) para mostrarte las estaciones más cercanas
-      y calcular distancias. Esta información <strong>nunca se envía a servidores</strong>: se usa
-      exclusivamente en tu dispositivo para ordenar y recomendar estaciones. Puedes usar la app sin
-      otorgar el permiso de ubicación.
+      y ordenar las estaciones. Para calcular distancias y tiempos por ruta real, las coordenadas
+      de origen y destino se envían a <strong>PeumaTek Routing API</strong> únicamente para responder
+      esa solicitud. Esto ocurre al mostrar recomendaciones en modo GPS y al calcular una ruta.
+      PeumaTek no utiliza estas coordenadas para crear perfiles ni mantener un historial de ubicación.
+      Puedes evitar este tratamiento usando la búsqueda por región/comuna sin GPS.
     </p>
   </section>
 
@@ -249,20 +250,19 @@
   <section>
     <h2>Conexiones externas</h2>
     <p>
-      La app se conecta a internet para descargar los precios de combustible y la ubicación de las
-      estaciones (datos públicos originados en la CNE) y para cargar la cartografía del mapa
-      (OpenStreetMap). Estas conexiones solo <strong>descargan datos de referencia</strong>; no
-      envían ninguna información tuya. En caso de no haber conexión, la app muestra los últimos datos
-      guardados con un aviso de modo sin conexión.
+      La app se conecta a internet para descargar los precios y la ubicación de las estaciones
+      desde GitHub Pages (datos públicos originados en la CNE), cargar la cartografía de OpenStreetMap,
+      calcular rutas mediante PeumaTek Routing API y mostrar publicidad de Google AdMob. En caso de
+      no haber conexión, la app puede mostrar los últimos precios guardados.
     </p>
   </section>
 
   <section>
     <h2>Notificaciones</h2>
     <p>
-      Las notificaciones son <strong>locales y opcionales</strong> (por ejemplo, alertas cuando baja
-      el precio en tus estaciones favoritas). Se generan en tu propio dispositivo, no requieren
-      conexión a internet y vienen desactivadas por defecto. Puedes activarlas o desactivarlas en
+      Las notificaciones son <strong>locales y opcionales</strong>. El recordatorio diario se programa
+      en el dispositivo. Las alertas de baja de precio se comprueban cuando abres o actualizas la app;
+      no existe una tarea de seguimiento remoto o permanente. Puedes activarlas o desactivarlas en
       cualquier momento desde Ajustes.
     </p>
   </section>
@@ -271,11 +271,15 @@
     <h2>Publicidad — Google AdMob</h2>
     <p>
       Esta app utiliza <strong>Google AdMob</strong> para mostrar anuncios y financiar su
-      desarrollo gratuito. AdMob puede recopilar el identificador de publicidad de tu
-      dispositivo (<em>Advertising ID</em>) con el fin de mostrar anuncios relevantes.
-      Este identificador es gestionado exclusivamente por Google según su
+      desarrollo gratuito. Para servir y medir anuncios, AdMob puede recopilar el identificador de
+      publicidad (<em>Advertising ID</em>), identificadores del dispositivo, dirección IP y ubicación
+      aproximada. Estos datos son gestionados por Google según su
       <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">política de privacidad</a>.
-      No tenemos acceso ni almacenamos dicho identificador en nuestros sistemas.
+      PeumaTek no tiene acceso ni almacena dicho identificador en sus sistemas.
+    </p>
+    <p>
+      Cuando Google lo requiere para tu región, puedes revisar o retirar tu consentimiento desde
+      <em>Configuración → Privacidad de anuncios</em> dentro de la aplicación.
     </p>
     <p>
       Puedes gestionar o restablecer tu identificador de publicidad en
