@@ -1,0 +1,43 @@
+name: Mantener descuentos
+
+on:
+  push:
+    paths:
+      - data/descuentos.json
+      - scripts/maintain-discounts.mjs
+      - .github/workflows/maintain-discounts.yml
+  schedule:
+    - cron: '15 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  validate-and-prune:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Retirar ofertas vencidas o sin revisión reciente
+        if: github.event_name != 'push'
+        run: node scripts/maintain-discounts.mjs --prune
+      - name: Validar catálogo
+        run: node scripts/maintain-discounts.mjs --check
+      - name: Publicar retiro automático
+        id: publish
+        if: github.event_name != 'push'
+        run: |
+          if ! git diff --quiet -- data/descuentos.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/descuentos.json
+            git commit -m "data: retirar descuentos vencidos o pendientes de revisión"
+            git push origin HEAD:main
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Reconstruir GitHub Pages tras el retiro
+        if: steps.publish.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/$GITHUB_REPOSITORY/pages/builds"
